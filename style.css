@@ -1,0 +1,101 @@
+/* 전체 요소에 마진,패딩 0으로 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 높이와 너비를 사용할수있게 설정후,가운데 정렬위해 flex */
+html,
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* 위아래 여백위해 높이90으로 지정, 너비는 절반만 사용 */
+.calculator-container {
+  width: 480px;
+  height: 580px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 20px rgb(1, 81, 151);
+  border-radius: 1rem;
+  gap: 14px;
+}
+
+/* 원의 여백 맟추기위해 flex후 space써줌 */
+.circles {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circles div {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+.circle1 {
+  background-color: red;
+}
+.circle2 {
+  background-color: blue;
+}
+.circle3 {
+  background-color: green;
+}
+
+.display {
+  height: 100px;
+  border: 2px solid rgb(159, 210, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  font-size: 3rem;
+  color: rgb(8, 140, 255);
+  overflow: hidden;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 0번 사이즈조정하려고  */
+.btns {
+  display: flex;
+}
+
+.btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  height: 70px;
+  border: 1px solid #ffffff;
+  color: white;
+  background-color: rgb(159, 210, 255);
+  flex: 1;
+}
+
+/* 버튼에 마우스 올리면 색상 변하게 */
+.btn:hover {
+  background-color: rgb(66, 100, 129);
+  color: white;
+}
+
+/* 버튼 클릭하면 색상 변하게 */
+.btn:active {
+  background-color: rgb(7, 41, 51);
+}
+
+/* 0번 사이즈 조정위해 다른버튼의 2배 */
+#zero {
+  flex: 2;
+}
